@@ -350,6 +350,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: JunHong Zhu (285AA3RCX7)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: JunHong Zhu (285AA3RCX7)";
 				DEVELOPMENT_TEAM = 72GJ4BTB4F;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = JenkinsNonePods/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
@@ -368,6 +369,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: JunHong Zhu (72GJ4BTB4F)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: JunHong Zhu (72GJ4BTB4F)";
 				DEVELOPMENT_TEAM = 72GJ4BTB4F;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = JenkinsNonePods/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
