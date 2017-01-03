@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B745FB2CB17089F335535F38 /* libPods-JenkinsNonePods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1AAFD65359EFF138B877D2 /* libPods-JenkinsNonePods.a */; };
 		F79ED3F11E1BCF6D001DBB81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F79ED3F01E1BCF6D001DBB81 /* main.m */; };
 		F79ED3F41E1BCF6D001DBB81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F79ED3F31E1BCF6D001DBB81 /* AppDelegate.m */; };
 		F79ED3F71E1BCF6D001DBB81 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F79ED3F61E1BCF6D001DBB81 /* ViewController.m */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58FFC1B754E26E53DE60A9D3 /* Pods-JenkinsNonePods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JenkinsNonePods.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JenkinsNonePods/Pods-JenkinsNonePods.debug.xcconfig"; sourceTree = "<group>"; };
+		981CEDB7676DD46E9673142D /* Pods-JenkinsNonePods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JenkinsNonePods.release.xcconfig"; path = "Pods/Target Support Files/Pods-JenkinsNonePods/Pods-JenkinsNonePods.release.xcconfig"; sourceTree = "<group>"; };
+		9F1AAFD65359EFF138B877D2 /* libPods-JenkinsNonePods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JenkinsNonePods.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79ED3EC1E1BCF6D001DBB81 /* JenkinsNonePods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JenkinsNonePods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79ED3F01E1BCF6D001DBB81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F79ED3F21E1BCF6D001DBB81 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B745FB2CB17089F335535F38 /* libPods-JenkinsNonePods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8FFE3A11DC396727CB34F686 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				58FFC1B754E26E53DE60A9D3 /* Pods-JenkinsNonePods.debug.xcconfig */,
+				981CEDB7676DD46E9673142D /* Pods-JenkinsNonePods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C607049C719CA5C09BFC4A03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F1AAFD65359EFF138B877D2 /* libPods-JenkinsNonePods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F79ED3E31E1BCF6D001DBB81 = {
 			isa = PBXGroup;
 			children = (
 				F79ED3EE1E1BCF6D001DBB81 /* JenkinsNonePods */,
 				F79ED3ED1E1BCF6D001DBB81 /* Products */,
+				8FFE3A11DC396727CB34F686 /* Pods */,
+				C607049C719CA5C09BFC4A03 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F79ED4031E1BCF6D001DBB81 /* Build configuration list for PBXNativeTarget "JenkinsNonePods" */;
 			buildPhases = (
+				273A765D81C827449F2F395F /* [CP] Check Pods Manifest.lock */,
 				F79ED3E81E1BCF6D001DBB81 /* Sources */,
 				F79ED3E91E1BCF6D001DBB81 /* Frameworks */,
 				F79ED3EA1E1BCF6D001DBB81 /* Resources */,
+				4915B04796A6A234A2C6D29D /* [CP] Embed Pods Frameworks */,
+				F7658537C41561AA99EF65E5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,6 +172,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		273A765D81C827449F2F395F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4915B04796A6A234A2C6D29D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JenkinsNonePods/Pods-JenkinsNonePods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7658537C41561AA99EF65E5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JenkinsNonePods/Pods-JenkinsNonePods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F79ED3E81E1BCF6D001DBB81 /* Sources */ = {
@@ -269,6 +344,7 @@
 		};
 		F79ED4041E1BCF6D001DBB81 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58FFC1B754E26E53DE60A9D3 /* Pods-JenkinsNonePods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: JunHong Zhu (285AA3RCX7)";
@@ -285,6 +361,7 @@
 		};
 		F79ED4051E1BCF6D001DBB81 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 981CEDB7676DD46E9673142D /* Pods-JenkinsNonePods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: JunHong Zhu (72GJ4BTB4F)";
